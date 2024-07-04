@@ -1,0 +1,12 @@
+.settings {
+    padding: 20px;
+  }
+  
+  .settings h1 {
+    margin-bottom: 20px;
+  }
+  
+  .settings .ant-tabs {
+    margin-top: 20px;
+  }
+  

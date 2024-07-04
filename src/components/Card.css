@@ -1,0 +1,29 @@
+.card {
+  background-color: #ffffff; /* Fundo claro */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 15px; /* Borda mais arredondada */
+  padding: 20px; /* Espaçamento interno */
+  width: 300px; /* Largura fixa */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efeito de elevação ao hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao hover */
+}
+
+.card h3 {
+  margin: 0 0 15px; /* Margem inferior aumentada */
+  font-size: 20px; /* Tamanho da fonte do título */
+  color: #333; /* Cor do título */
+  font-family: 'Helvetica Neue', sans-serif; /* Fonte moderna */
+}
+
+.card p {
+  margin: 0; /* Sem margem */
+  font-size: 16px; /* Tamanho da fonte do parágrafo */
+  color: #666; /* Cor do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  font-family: 'Arial', sans-serif; /* Fonte para o texto */
+}

@@ -1,0 +1,18 @@
+.reports {
+    padding: 20px;
+  }
+  
+  .reports h1 {
+    margin-bottom: 20px;
+  }
+  
+  .reports .filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .reports .charts {
+    margin-top: 20px;
+  }
+  

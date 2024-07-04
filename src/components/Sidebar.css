@@ -1,0 +1,48 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff; /* Fundo claro */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: #2c3e50; /* Cor do texto escura */
+  font-family: 'Helvetica Neue', sans-serif; /* Fonte moderna */
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2c3e50; /* Cor do título escura */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ecf0f1; /* Cor de fundo dos itens da lista clara */
+  border-radius: 5px;
+  color: #2c3e50; /* Cor do texto dos itens da lista */
+  cursor: pointer;
+  outline: none; /* Remover borda de foco padrão */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Transição suave para foco */
+}
+
+.sidebar ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #2c3e50; /* Cor do texto dos links */
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse (opcional) */
+}
+
+.sidebar ul li:focus {
+  background-color: #bdc3c7; /* Cor de fundo ao foco */
+  border: 2px solid #2c3e50; /* Borda ao foco */
+}

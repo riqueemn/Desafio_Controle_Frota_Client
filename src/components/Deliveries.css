@@ -1,0 +1,65 @@
+.deliveries {
+  padding: 20px;
+  background-color: #f5f5f5; /* Cor de fundo suave para o container */
+  border-radius: 8px; /* Bordas arredondadas para o container */
+}
+
+.deliveries h1 {
+  margin-bottom: 20px;
+  font-size: 24px; /* Tamanho da fonte maior para o título */
+  font-weight: bold; /* Negrito para o título */
+  color: #333; /* Cor do texto do título */
+}
+
+.deliveries .ant-btn {
+  margin-bottom: 20px;
+  background-color: #1890ff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Remover borda do botão */
+  border-radius: 4px; /* Bordas arredondadas para o botão */
+}
+
+.deliveries .ant-btn:hover {
+  background-color: #40a9ff; /* Cor de fundo do botão ao passar o mouse */
+  color: #fff; /* Cor do texto do botão ao passar o mouse */
+}
+
+.deliveries .ant-table {
+  background-color: #fff; /* Cor de fundo da tabela */
+  border-radius: 8px; /* Bordas arredondadas para a tabela */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para a tabela */
+}
+
+.deliveries .ant-table-thead > tr > th {
+  background-color: #fafafa; /* Cor de fundo do cabeçalho da tabela */
+  font-weight: bold; /* Negrito para o cabeçalho da tabela */
+  color: #333; /* Cor do texto do cabeçalho da tabela */
+}
+
+.deliveries .ant-table-tbody > tr > td {
+  color: #555; /* Cor do texto do corpo da tabela */
+}
+
+.deliveries .ant-input,
+.deliveries .ant-select {
+  border-radius: 4px; /* Bordas arredondadas para os inputs e selects */
+  margin-bottom: 16px; /* Espaçamento inferior */
+}
+
+.deliveries .ant-modal {
+  border-radius: 8px; /* Bordas arredondadas para o modal */
+}
+
+.deliveries .ant-modal-header {
+  border-top-left-radius: 8px; /* Bordas arredondadas no cabeçalho do modal */
+  border-top-right-radius: 8px; /* Bordas arredondadas no cabeçalho do modal */
+}
+
+.deliveries .ant-modal-footer {
+  border-bottom-left-radius: 8px; /* Bordas arredondadas no rodapé do modal */
+  border-bottom-right-radius: 8px; /* Bordas arredondadas no rodapé do modal */
+}
+
+.deliveries .ant-modal-content {
+  border-radius: 8px; /* Bordas arredondadas para o conteúdo do modal */
+}
