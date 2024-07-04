@@ -108,11 +108,11 @@ const Deliveries = () => {
   const handleSubmit = async (values) => {
     try {
       if (isEditMode && currentDelivery) {
-        await axios.put(`http://localhost:3001/api/deliveries/${currentDelivery.id}`, values);
+        await axios.put(`https://desafio-controle-frota-api.onrender.com/api/deliveries/${currentDelivery.id}`, values);
         message.success('Entrega atualizada com sucesso');
       } else {
         values.status = "Pendente"
-        await axios.post('http://localhost:3001/api/deliveries', values);
+        await axios.post('https://desafio-controle-frota-api.onrender.com/api/deliveries', values);
         message.success('Entrega adicionada com sucesso');
       }
       fetchDeliveries();
@@ -131,14 +131,14 @@ const Deliveries = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3001/api/deliveries/${id}`);
+    await axios.delete(`https://desafio-controle-frota-api.onrender.com/api/deliveries/${id}`);
     fetchDeliveries();
   };
 
   const handleConcluirEntrega = async (value) => {
     try {
       value.status = "Concluído"
-      await axios.put(`http://localhost:3001/api/deliveries/${value.id}`, value);
+      await axios.put(`https://desafio-controle-frota-api.onrender.com/api/deliveries/${value.id}`, value);
       message.success('Entrega concluída com sucesso');
       fetchDeliveries();
     } catch (error) {
