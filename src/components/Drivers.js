@@ -29,7 +29,7 @@ const Drivers = () => {
   const fetchDrivers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3001/api/drivers');
+      const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/drivers');
       setDrivers(response.data);
       setFilteredDrivers(response.data);
     } catch (error) {
@@ -40,7 +40,7 @@ const Drivers = () => {
 
   const fetchTrucks = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/trucks');
+      const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/trucks');
       setTrucks(response.data);
     } catch (error) {
       message.error('Error fetching trucks');
@@ -51,7 +51,7 @@ const Drivers = () => {
     values.deliveriesCompleted = 0    
     values.status = "Disponível"
     try {
-      const response = await axios.post('http://localhost:3001/api/drivers', values);
+      const response = await axios.post('https://desafio-controle-frota-api.onrender.com/api/drivers', values);
       setDrivers([...drivers, response.data]);
       setModalVisible(false);
       form.resetFields();
@@ -69,7 +69,7 @@ const Drivers = () => {
 
   const handleUpdateDriver = async (values) => {
     try {
-      const response = await axios.put(`http://localhost:3001/api/drivers/${editingDriver.id}`, values);
+      const response = await axios.put(`https://desafio-controle-frota-api.onrender.com/api/drivers/${editingDriver.id}`, values);
       setDrivers(drivers.map(driver => driver.id === editingDriver.id ? response.data : driver));
       setModalVisible(false);
       setEditingDriver(null);
@@ -82,7 +82,7 @@ const Drivers = () => {
 
   const handleDeleteDriver = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/api/drivers/${id}`);
+      await axios.delete(`https://desafio-controle-frota-api.onrender.com/api/drivers/${id}`);
       setDrivers(drivers.filter(driver => driver.id !== id));
       message.success('Driver deleted successfully');
     } catch (error) {

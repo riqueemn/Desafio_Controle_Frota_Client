@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/dashboard/summary');
+        const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/dashboard/summary');
         setSummary(response.data);
       } catch (error) {
         console.error('Error fetching summary:', error);
@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     const fetchFinancialSummary = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/dashboard/financial-summary');
+        const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/dashboard/financial-summary');
         setFinancialSummary(response.data);
       } catch (error) {
         console.error('Error fetching financial summary:', error);
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     const fetchAlerts = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/dashboard/alerts');
+        const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/dashboard/alerts');
         setAlerts(response.data);
       } catch (error) {
         console.error('Error fetching alerts:', error);

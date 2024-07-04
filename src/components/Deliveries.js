@@ -47,12 +47,12 @@ const Deliveries = () => {
   };
   
   const fetchDeliveries = async () => {
-    const result = await axios.get('http://localhost:3001/api/deliveries');
+    const result = await axios.get('https://desafio-controle-frota-api.onrender.com/api/deliveries');
     const deliveriesData = result.data;
 
     // Fetch trucks and drivers data to join with deliveries
-    const trucksData = await axios.get('http://localhost:3001/api/trucks');
-    const driversData = await axios.get('http://localhost:3001/api/drivers');
+    const trucksData = await axios.get('https://desafio-controle-frota-api.onrender.com/api/trucks');
+    const driversData = await axios.get('https://desafio-controle-frota-api.onrender.com/api/drivers');
 
     const deliveriesWithDetails = deliveriesData.map(delivery => {
       const truck = trucksData.data.find(t => t.id === delivery.truckId);
@@ -68,22 +68,22 @@ const Deliveries = () => {
   };
 
   const fetchTrucks = async () => {
-    const result = await axios.get('http://localhost:3001/api/trucks');
+    const result = await axios.get('https://desafio-controle-frota-api.onrender.com/api/trucks');
     setTrucks(result.data);
   };
 
   const fetchDrivers = async () => {
-    const result = await axios.get('http://localhost:3001/api/drivers');
+    const result = await axios.get('https://desafio-controle-frota-api.onrender.com/api/drivers');
     setDrivers(result.data);
   };
 
   const fetchAddresses = async () => {
-    const result = await axios.get('http://localhost:3001/api/addresses');
+    const result = await axios.get('https://desafio-controle-frota-api.onrender.com/api/addresses');
     setDestination(result.data);
   };
 
   const fetchCargas = async () => {
-    const result = await axios.get('http://localhost:3001/api/cargas');
+    const result = await axios.get('https://desafio-controle-frota-api.onrender.com/api/cargas');
     setCarga(result.data);
   };
 

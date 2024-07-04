@@ -26,7 +26,7 @@ const Fleet = () => {
   const fetchTrucks = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://desafio-controle-frota-api-2-farpxg7bq-henrialbbs-projects.vercel.app/api/trucks');
+      const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/trucks');
       setTrucks(response.data);
       setFilteredTrucks(response.data);
     } catch (error) {
@@ -37,7 +37,7 @@ const Fleet = () => {
 
   const handleAddTruck = async (values) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/trucks', values);
+      const response = await axios.post('https://desafio-controle-frota-api.onrender.com/api/trucks', values);
       setTrucks([...trucks, response.data]);
       setModalVisible(false);
       form.resetFields();
@@ -55,7 +55,7 @@ const Fleet = () => {
 
   const handleUpdateTruck = async (values) => {
     try {
-      const response = await axios.put(`http://localhost:3001/api/trucks/${editingTruck.id}`, values);
+      const response = await axios.put(`https://desafio-controle-frota-api.onrender.com/api/trucks/${editingTruck.id}`, values);
       setTrucks(trucks.map(truck => truck.id === editingTruck.id ? response.data : truck));
       setModalVisible(false);
       setEditingTruck(null);
@@ -68,7 +68,7 @@ const Fleet = () => {
 
   const handleDeleteTruck = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/api/trucks/${id}`);
+      await axios.delete(`https://desafio-controle-frota-api.onrender.com/api/trucks/${id}`);
       setTrucks(trucks.filter(truck => truck.id !== id));
       message.success('Truck deleted successfully');
     } catch (error) {

@@ -18,7 +18,7 @@ const Settings = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3001/api/users');
+      const response = await axios.get('https://desafio-controle-frota-api.onrender.com/api/users');
       setUsers(response.data);
     } catch (error) {
       message.error('Error fetching users');
@@ -28,7 +28,7 @@ const Settings = () => {
 
   const handleAddUser = async (values) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/users', values);
+      const response = await axios.post('https://desafio-controle-frota-api.onrender.com/api/users', values);
       setUsers([...users, response.data]);
       setModalVisible(false);
       form.resetFields();
@@ -46,7 +46,7 @@ const Settings = () => {
 
   const handleUpdateUser = async (values) => {
     try {
-      const response = await axios.put(`http://localhost:3001/api/users/${editingUser.id}`, values);
+      const response = await axios.put(`https://desafio-controle-frota-api.onrender.com/api/users/${editingUser.id}`, values);
       setUsers(users.map(user => user.id === editingUser.id ? response.data : user));
       setModalVisible(false);
       setEditingUser(null);
@@ -59,7 +59,7 @@ const Settings = () => {
 
   const handleDeleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/api/users/${id}`);
+      await axios.delete(`https://desafio-controle-frota-api.onrender.com/api/users/${id}`);
       setUsers(users.filter(user => user.id !== id));
       message.success('User deleted successfully');
     } catch (error) {
