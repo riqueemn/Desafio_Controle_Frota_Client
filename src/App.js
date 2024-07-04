@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import Fleet from './components/Fleet';
 import Deliveries from './components/Deliveries';
 import Drivers from './components/Drivers';
-import Reports from './components/Reports';
 import Settings from './components/Settings';
 import './App.css';
 
